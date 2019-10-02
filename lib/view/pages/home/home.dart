@@ -3,6 +3,7 @@ import 'package:clothing_store/presenter/mock_data/mock_data.dart';
 import 'package:clothing_store/view/widgets/home/appbar.dart';
 import 'package:clothing_store/view/widgets/home/banners.dart';
 import 'package:clothing_store/view/widgets/home/bottom_bar.dart';
+import 'package:clothing_store/view/widgets/home/hot_trending.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -37,11 +38,11 @@ class _HomePageState extends State<HomePage> {
                   items: homeBanners,
                   aspectRatio: 2.4,
                 ),
+                SizedBox(height: 8.0,),
                 Container(
-                  color: Colors.white,
                   child: Column(
                     children: <Widget>[
-                      
+                      HotTrendingView(hotItems: hotItems,),
                       // Các sản phẩm
                     ],
                   ),

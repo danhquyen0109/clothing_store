@@ -13,6 +13,8 @@ class BannerView extends StatefulWidget {
 }
 
 class _BannerViewState extends State<BannerView> {
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     Size media = MediaQuery.of(context).size;
@@ -28,6 +30,19 @@ class _BannerViewState extends State<BannerView> {
               ),
             ))
         .toList();
+
+    List<Widget> dots = List.generate(widget.items.length, (index) {
+      return Container(
+        width: 8.0,
+        height: 8.0,
+        margin: EdgeInsets.symmetric(horizontal: 4.0),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: index == currentIndex ? Colors.blue : Colors.white,
+        ),
+      );
+    });
+
     return Container(
       child: AspectRatio(
         aspectRatio: widget.aspectRatio,
@@ -39,18 +54,33 @@ class _BannerViewState extends State<BannerView> {
                 height:
                     (MediaQuery.of(context).size.width) / widget.aspectRatio,
                 child: PageView(
+                  onPageChanged: (nextIndex) {
+                    setState(() {
+                      currentIndex = nextIndex;
+                    });
+                  },
                   children: images,
                 ),
               ),
             ),
             Positioned(
-              bottom: 24.0,
+              bottom: 12.0,
               left: 16.0,
               right: 16.0,
-              child: Container(
-                  color: Colors.black.withOpacity(0.3),
-                  height: 40.0,
-                  child: Row()),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                      padding: EdgeInsets.all(4.0),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      child: Row(
+                        children: dots,
+                      )),
+                ],
+              ),
             ),
           ],
         ),
