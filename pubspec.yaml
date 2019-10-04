@@ -74,3 +74,6 @@ flutter:
     - assets/img/home_banners/sale_off.jpg
     - assets/img/hot_items/hot01.png
     - assets/img/hot_items/hot02.png
+    - assets/img/collections/collection1.jpg
+    - assets/img/collections/women.png
+    - assets/img/collections/men.png

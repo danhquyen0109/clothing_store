@@ -3,6 +3,7 @@ import 'package:clothing_store/presenter/mock_data/mock_data.dart';
 import 'package:clothing_store/view/widgets/home/appbar.dart';
 import 'package:clothing_store/view/widgets/home/banners.dart';
 import 'package:clothing_store/view/widgets/home/bottom_bar.dart';
+import 'package:clothing_store/view/widgets/home/collection.dart';
 import 'package:clothing_store/view/widgets/home/hot_trending.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,10 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     children: <Widget>[
                       HotTrendingView(hotItems: hotItems,),
+                      SizedBox(height: 8.0,),
+                      Collection(),
                       // Các sản phẩm
+                      Container(height: 60,)
                     ],
                   ),
                 ),

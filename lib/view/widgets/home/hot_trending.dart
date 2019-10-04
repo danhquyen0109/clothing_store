@@ -20,7 +20,7 @@ class _HotTrendingState extends State<HotTrendingView> {
         padding: EdgeInsets.only(left: 16.0, bottom: 8.0),
         child: GestureDetector(
           onTap: () {
-            print("Ấn đàu buồi");
+            print("Cúc cu");
           },
           child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
