@@ -20,7 +20,7 @@ class _BannerViewState extends State<BannerView> {
     Size media = MediaQuery.of(context).size;
     List<Widget> images = widget.items
         .map((image) => Container(
-              padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0),
+              padding: EdgeInsets.only(left: 16.0, right: 16.0, top: 8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image(

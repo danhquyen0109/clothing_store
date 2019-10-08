@@ -5,6 +5,7 @@ import 'package:clothing_store/view/widgets/home/banners.dart';
 import 'package:clothing_store/view/widgets/home/bottom_bar.dart';
 import 'package:clothing_store/view/widgets/home/collection.dart';
 import 'package:clothing_store/view/widgets/home/hot_trending.dart';
+import 'package:clothing_store/view/widgets/home/style.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -41,11 +42,14 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 8.0,),
                 Container(
+                  color: Colors.grey[50],
                   child: Column(
                     children: <Widget>[
                       HotTrendingView(hotItems: hotItems,),
                       SizedBox(height: 8.0,),
                       Collection(),
+                      SizedBox(height: 8.0,),
+                      StyleView(),
                       // Các sản phẩm
                       Container(height: 60,)
                     ],

@@ -77,3 +77,7 @@ flutter:
     - assets/img/collections/collection1.jpg
     - assets/img/collections/women.png
     - assets/img/collections/men.png
+    - assets/img/style/basic.jpg
+    - assets/img/style/office.png
+    - assets/img/style/sport.png
+    - assets/img/style/street_wear.png

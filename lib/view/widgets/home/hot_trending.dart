@@ -22,45 +22,42 @@ class _HotTrendingState extends State<HotTrendingView> {
           onTap: () {
             print("Cúc cu");
           },
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Image.asset(
-                      item["image"].toString(),
-                      height: MediaQuery.of(context).size.height / 6,
-                      width: MediaQuery.of(context).size.height / 6,
-                      fit: BoxFit.cover,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Stack(
+                children: <Widget>[
+                  Image.asset(
+                    item["image"].toString(),
+                    height: MediaQuery.of(context).size.height / 6,
+                    width: MediaQuery.of(context).size.height / 6,
+                    fit: BoxFit.cover,
+                  ),
+                  Positioned(
+                    right: 0.0,
+                    child: Container(
+                      child: Center(
+                          child: Text(
+                        hot,
+                        style: TextStyle(fontSize: 12.0, color: Colors.white),
+                      )),
+                      height: 16.0,
+                      width: 32.0,
+                      decoration: BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.circular(4.0)),
                     ),
-                    Positioned(
-                      right: 0.0,
-                      child: Container(
-                        child: Center(
-                            child: Text(
-                          hot,
-                          style: TextStyle(fontSize: 12.0, color: Colors.white),
-                        )),
-                        height: 16.0,
-                        width: 32.0,
-                        decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(4.0)),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 8.0,
-                ),
-                Text(
-                  item["price"],
-                  style: TextStyle(fontWeight: FontWeight.w600),
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 8.0,
+              ),
+              Text(
+                item["price"],
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+            ],
           ),
         ),
       );
