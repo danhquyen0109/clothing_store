@@ -83,3 +83,12 @@ flutter:
   assets:
     - assets/img/home_banners/sale_off.jpg
     - assets/img/category_img/
+    - assets/img/hot_items/hot01.png
+    - assets/img/hot_items/hot02.png
+    - assets/img/collections/collection1.jpg
+    - assets/img/collections/women.png
+    - assets/img/collections/men.png
+    - assets/img/style/basic.jpg
+    - assets/img/style/office.png
+    - assets/img/style/sport.png
+    - assets/img/style/street_wear.png

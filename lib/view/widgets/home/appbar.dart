@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 
 Widget appBarHome() {
   return AppBar(
-    title: Text(appName),
+    title: Text(
+      appName,
+      style: TextStyle(letterSpacing: 3.2),
+    ),
     elevation: 0.0,
     centerTitle: true,
     leading: IconButton(
@@ -44,8 +47,7 @@ Widget appBarHome() {
     ],
     bottom: PreferredSize(
       child: Container(
-        padding:
-            EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8.0),
+        padding: EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
         child: Container(
           height: 40.0,
           decoration: BoxDecoration(

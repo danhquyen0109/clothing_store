@@ -1,2 +1,14 @@
 String appName = "HUNTER";
 String searchText = "Bạn tìm gì hôm nay?";
+String trending = "Xu hướng";
+String seeMore = "Xem thêm";
+String hot = "Hot";
+String style = "Phong Cách";
+String office = "Công sở";
+String officeTitle = "Sang trọng, lịch sự.";
+String basic = "Giản Dị";
+String basicTitle = "Thoải mái, gọn gàng.";
+String streetWear = "Đường phố";
+String streetTitle = "Hiện đại, bụi bặm.";
+String sport = "Thể thao";
+String sportTitle = "Năng động, trẻ trung.";
