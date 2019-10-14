@@ -1,3 +1,4 @@
+import 'package:clothing_store/view/widgets/category.dart';
 import 'package:flutter/material.dart';
 
 Color color = Color(0xffff024a);
@@ -43,7 +44,10 @@ class _BottomBarState extends State<BottomBarHome> {
           child: Ink(
             child: InkWell(
               onTap: () {
-                print("hola!!");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CateGoryView()),
+                );
               },
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
